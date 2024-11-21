@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engines Templates</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Ajout du CDN Handlebars -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemples d'Engines Templates</h1>
+
+        <div id="installation-info">
+            <h3>Installation Handlebars</h3>
+            <p>1. Ajoutez Handlebars à votre projet en incluant le CDN suivant dans la section <code>&lt;head&gt;</code> de votre fichier HTML :</p>
+            <pre>&lt;script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"&gt;&lt;/script&gt;</pre>
+            <p>2. Utilisez la méthode <code>Handlebars.compile()</code> pour créer un template et l'instancier avec des données.</p>
+            <p>3. Le rendu sera généré avec <code>template(data)</code>.</p>
+            <p>Pour plus de détails, consultez le site officiel : <a href="https://handlebarsjs.com/guide/#installation" target="_blank">Installation Handlebars</a></p>
+            
+            <h3>Installation EJS</h3>
+            <p>1. Installez EJS via npm si vous utilisez Node.js : </p>
+            <pre>npm install ejs</pre>
+            <p>2. Pour un projet sans serveur Node.js, vous pouvez utiliser un moteur EJS simplifié ou faire un rendu manuel comme dans l'exemple ci-dessus.</p>
+            <p>3. Utilisez la méthode <code>ejs.render()</code> pour rendre des templates côté serveur.</p>
+            <p>Pour plus de détails, consultez le site officiel : <a href="https://ejs.co/#features" target="_blank">Installation EJS</a></p>
+        </div>
+
+
+        <div>
+            <button onclick="renderEJS()">Exemple EJS</button>
+            <button onclick="renderHandlebars()">Exemple Handlebars</button>
+            <button onclick="renderHandlebarsWithCondition()">Handlebars avec Condition</button>
+            <button onclick="renderConditionEJS()">Exemple EJS avec Condition</button>
+        </div>
+
+        <div id="result">
+            <h2>Résultat</h2>
+            <div id="output"></div>
+        </div>
+
+        <div id="code">
+            <h2>Code source et Données</h2>
+            <div id="templateAndData">
+                <h3>Template :</h3>
+                <pre id="templateCode"></pre>
+                <h3>Données :</h3>
+                <pre id="dataCode"></pre>
+                <h3>JavaScript :</h3>
+                <pre id="jsCode"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/handlebars.js"></script>
+    <script src="./js/ejs.js"></script>
+</body>
+</html>
